@@ -36,16 +36,16 @@ console.log("Computer chose: " + computerSelection)
 
 
 
-function playRound(humanSelection,computerSelection) {
-    if (humanSelection == "Rock" && computerSelection == "Scissors" ||
-        humanSelection == "Paper" && computerSelection == "Rock" ||
-        humanSelection == "Scissors" && computerSelection == "Paper") {
+function playRound(humanChoice,computerChoice) {
+    if (humanChoice == "Rock" && computerChoice == "Scissors" ||
+        humanChoice == "Paper" && computerChoice == "Rock" ||
+        humanChoice == "Scissors" && computerChoice == "Paper") {
         ++humanScore
         return "Human wins!"
-    } else if (humanSelection == "Rock" && computerSelection == "Scissors" ||
-        humanSelection == "Rock" && computerSelection == "Rock" ||
-        humanSelection == "Paper" && computerSelection == "Paper" ||
-        humanSelection == "Scissors" && computerSelection == "Scissors") {
+    } else if (humanChoice == "Rock" && computerChoice == "Scissors" ||
+        humanChoice == "Rock" && computerChoice == "Rock" ||
+        humanChoice == "Paper" && computerChoice == "Paper" ||
+        humanChoice == "Scissors" && computerChoice == "Scissors") {
             return "Draw!"
     } else {
         ++commputerScore
