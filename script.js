@@ -23,8 +23,6 @@ function getHumanChoice(y) {
     }
 }
 
-
-
 function playGame() {
     let humanScore = 0
     let commputerScore = 0
@@ -34,7 +32,7 @@ function playGame() {
         if (humanSelection == "Rock" && computerSelection == "Scissors" ||
             humanSelection == "Paper" && computerSelection == "Rock" ||
             humanSelection == "Scissors" && computerSelection == "Paper") {
-            humanScore = humanScore + 1;
+            humanScore++
             return "Human wins!"
         } else if (humanSelection == "Rock" && computerSelection == "Scissors" ||
             humanSelection == "Rock" && computerSelection == "Rock" ||
@@ -42,7 +40,7 @@ function playGame() {
             humanSelection == "Scissors" && computerSelection == "Scissors") {
                 return "Draw!"
         } else {
-            commputerScore = commputerScore + 1;
+            commputerScore++
             return "Computer wins!"
         }
     }
@@ -53,41 +51,50 @@ function playGame() {
     console.log(humanScore)
     console.log(commputerScore)
 
-    let humanSelection2 = getHumanChoice(prompt());
-    let computerSelection2 = getComputerChoice(3);
-    console.log("Human chose: " + humanSelection2)
-    console.log("Computer chose: " + computerSelection2)
-    playRound(humanSelection2,computerSelection2)
-    console.log(playRound(humanSelection2,computerSelection2))
+    humanSelection = getHumanChoice(prompt());
+    computerSelection = getComputerChoice(3);
+    console.log("Human chose: " + humanSelection)
+    console.log("Computer chose: " + computerSelection)
+    playRound(humanSelection,computerSelection)
+    console.log(playRound(humanSelection,computerSelection))
     console.log(humanScore)
     console.log(commputerScore)
 
-    let humanSelection3 = getHumanChoice(prompt());
-    let computerSelection3 = getComputerChoice(3);
-    console.log("Human chose: " + humanSelection3)
-    console.log("Computer chose: " + computerSelection3)
-    playRound(humanSelection3,computerSelection3)
-    console.log(playRound(humanSelection3,computerSelection3))
+    humanSelection = getHumanChoice(prompt());
+    computerSelection = getComputerChoice(3);
+    console.log("Human chose: " + humanSelection)
+    console.log("Computer chose: " + computerSelection)
+    playRound(humanSelection,computerSelection)
+    console.log(playRound(humanSelection,computerSelection))
+    console.log(humanScore)
+    console.log(commputerScore)
+    
+    humanSelection = getHumanChoice(prompt());
+    computerSelection = getComputerChoice(3);
+    console.log("Human chose: " + humanSelection)
+    console.log("Computer chose: " + computerSelection)
+    playRound(humanSelection,computerSelection)
+    console.log(playRound(humanSelection,computerSelection))
     console.log(humanScore)
     console.log(commputerScore)
 
-    let humanSelection4 = getHumanChoice(prompt());
-    let computerSelection4 = getComputerChoice(3);
-    console.log("Human chose: " + humanSelection4)
-    console.log("Computer chose: " + computerSelection4)
-    playRound(humanSelection4,computerSelection4)
-    console.log(playRound(humanSelection4,computerSelection4))
+    humanSelection = getHumanChoice(prompt());
+    computerSelection = getComputerChoice(3);
+    console.log("Human chose: " + humanSelection)
+    console.log("Computer chose: " + computerSelection)
+    playRound(humanSelection,computerSelection)
+    console.log(playRound(humanSelection,computerSelection))
     console.log(humanScore)
     console.log(commputerScore)
 
-    let humanSelection5 = getHumanChoice(prompt());
-    let computerSelection5 = getComputerChoice(3);
-    console.log("Human chose: " + humanSelection5)
-    console.log("Computer chose: " + computerSelection5)
-    playRound(humanSelection5,computerSelection5)
-    console.log(playRound(humanSelection5,computerSelection5))
-    console.log(humanScore)
-    console.log(commputerScore)
+    if (humanScore > commputerScore) {
+        console.log("Human has won the game!")
+    } else if (humanScore == commputerScore) {
+        console.log("That's a draw!")
+    } else {
+        console.log("Computer has won the game!")
+    }
+
 }
 
 playGame()
