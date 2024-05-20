@@ -43,10 +43,14 @@ function playRound(humanSelection,computerSelection) {
     }
 }
 
+const ps = require("prompt-sync");
+
+const prompt = ps();
+
 function playGame() {
 
     function fullTurn() {
-    humanSelection = getHumanChoice(prompt());
+    humanSelection = getHumanChoice(prompt("Make your choice"));
     computerSelection = getComputerChoice(3);
     console.log("Human chose: " + humanSelection)
     console.log("Computer chose: " + computerSelection)
