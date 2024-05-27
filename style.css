@@ -5,3 +5,9 @@ body {
     text-align: center;
     background-color: beige;
 }
+
+button {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}

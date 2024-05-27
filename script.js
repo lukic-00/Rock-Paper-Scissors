@@ -13,6 +13,7 @@ function getComputerChoice(x) {
 const rockButton = document.querySelector(".rockButton")
 const paperButton = document.querySelector(".paperButton")
 const scissorsButton = document.querySelector(".scissorsButton")
+const optionsContainer = document.querySelector(".optionsContainer")
 
 let humanScore = 0
 let computerScore = 0
@@ -78,12 +79,14 @@ function playGame() {
         endMatch()
     } )
     }  
-    
     fullTurn()
     
     
     
 }
+
+const para = document.createElement("p")
+
 function endMatch(){
     let finalResult;
     let everyFiveRounds = roundsPlayed % 5
@@ -91,14 +94,20 @@ function endMatch(){
         if(humanScore > computerScore){
             finalResult = "Human has won the game!"
             matchesWonbyHuman++
-            alert(finalResult)
+            //alert(finalResult)
+            para.textContent = "Human has won the game!"
+            optionsContainer.appendChild(para)
         } else if(humanScore < computerScore){
             finalResult = "Computer has won the game!"
             matchesWonbyComputer++
-            alert(finalResult)
+            //alert(finalResult)
+            para.textContent = "Computer has won the game!"
+            optionsContainer.appendChild(para)
         } else {
             finalResult = "Draw!"
-            alert(finalResult)
+            //alert(finalResult)
+            para.textContent = "Draw!"
+            optionsContainer.appendChild(para)
         }
         humanScore = 0;
         computerScore = 0;
