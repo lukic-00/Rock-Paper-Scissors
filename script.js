@@ -10,18 +10,9 @@ function getComputerChoice(x) {
 
 }
 
-function getHumanChoice(y) {
-    y = y.toLowerCase();
-    if (y == "rock") {
-        return "Rock"
-    } else if (y == "paper") {
-        return "Paper"
-    } else if (y == "scissors") {
-        return "Scissors"
-    } else {
-        return "Invalid choice"
-    }
-}
+const rockButton = document.querySelector(".rockButton")
+const paperButton = document.querySelector(".paperButton")
+const scissorsButton = document.querySelector(".scissorsButton")
 
 let humanScore = 0
 let computerScore = 0
@@ -43,37 +34,75 @@ function playRound(humanSelection,computerSelection) {
     }
 }
 
-const ps = require("prompt-sync");
-
-const prompt = ps();
+let roundsPlayed = 0;
+let matchesWonbyHuman = 0
+let matchesWonbyComputer = 0
 
 function playGame() {
 
     function fullTurn() {
-    humanSelection = getHumanChoice(prompt("Make your choice"));
-    computerSelection = getComputerChoice(3);
-    console.log("Human chose: " + humanSelection)
-    console.log("Computer chose: " + computerSelection)
-    console.log(playRound(humanSelection,computerSelection))
-    console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
-    }
-    
-    //Repeat the round 5 times
-    fullTurn()
-    fullTurn()
-    fullTurn()
-    fullTurn()
-    fullTurn()
-    
-    if (humanScore > computerScore) {
-        console.log("Human has won the game!")
-    } else if (humanScore == computerScore) {
-        console.log("That's a draw!")
-    } else {
-        console.log("Computer has won the game!")
-    }
 
+    rockButton.addEventListener("click", () => {
+        const humanSelection = "Rock"
+        const computerSelection = getComputerChoice(3);
+        console.log("Human chose: " + humanSelection)
+        console.log("Computer chose: " + computerSelection)
+        console.log(playRound(humanSelection, computerSelection))
+        console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
+        roundsPlayed++
+        console.log(roundsPlayed)
+        endMatch()
+    })
+
+    paperButton.addEventListener("click", () => {
+        const humanSelection = "Paper"
+        const computerSelection = getComputerChoice(3);
+        console.log("Human chose: " + humanSelection)
+        console.log("Computer chose: " + computerSelection)
+        console.log(playRound(humanSelection, computerSelection))
+        console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
+        roundsPlayed++
+        console.log(roundsPlayed)
+        endMatch()
+    } )
+
+    scissorsButton.addEventListener("click", () => {
+        const humanSelection = "Scissors"
+        const computerSelection = getComputerChoice(3);
+        console.log("Human chose: " + humanSelection)
+        console.log("Computer chose: " + computerSelection)
+        console.log(playRound(humanSelection, computerSelection))
+        console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
+        roundsPlayed++
+        console.log(roundsPlayed)
+        endMatch()
+    } )
+    }  
+    
+    fullTurn()
+    
+    
+    
 }
-
+function endMatch(){
+    let finalResult;
+    let everyFiveRounds = roundsPlayed % 5
+    if(everyFiveRounds == 0){     
+        if(humanScore > computerScore){
+            finalResult = "Human has won the game!"
+            matchesWonbyHuman++
+            alert(finalResult)
+        } else if(humanScore < computerScore){
+            finalResult = "Computer has won the game!"
+            matchesWonbyComputer++
+            alert(finalResult)
+        } else {
+            finalResult = "Draw!"
+            alert(finalResult)
+        }
+        humanScore = 0;
+        computerScore = 0;
+    }  
+    
+}
 playGame()
-
