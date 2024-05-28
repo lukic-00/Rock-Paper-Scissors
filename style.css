@@ -7,16 +7,40 @@ body {
     font-family: "Radio Canada Big", sans-serif;
 }
 
+.counters {
+    display: flex;
+    gap: 30px;
+}
+
 .humanVictoryCounter {
-    height: 30px;
-    width: 30px;
+    height: 100px;
+    width: 100px;
     background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .computerVictoryCounter {
-    height: 30px;
-    width: 30px;
+    height: 100px;
+    width: 100px;
     background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.paraHumanVictoryCounter {
+    margin: 0;
+}
+
+.paraComputerVictoryCounter {
+    margin: 0;
 }
 
 button {
@@ -25,6 +49,13 @@ button {
     background-color: antiquewhite;
     cursor: pointer;
     font-size: 16px;
+    
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
 }
 
 button:hover {
@@ -38,6 +69,7 @@ button:hover {
     align-items: center;
     flex-basis: 400px;
     background-color: lightblue;
+    flex-wrap: wrap;
 }
 
 .result {
@@ -56,7 +88,7 @@ button:hover {
     color: white;
     border-radius: 20px;
     height: 40px;
-    max-width: 310px;
+    max-width: 400px;
     min-width: 0px;
     margin-bottom: 20px;
 }
@@ -65,7 +97,9 @@ button:hover {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .resultContainer {

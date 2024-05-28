@@ -53,7 +53,7 @@ function playGame() {
         const humanSelection = "Rock"
         const computerSelection = getComputerChoice(3);
         console.log(playRound(humanSelection, computerSelection))
-        outPara.textContent = "Computer chose " + computerSelection + " | You chose " + humanSelection
+        outPara.textContent = "Computer: " + computerSelection + " | Human: " + humanSelection
         outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
@@ -65,7 +65,7 @@ function playGame() {
         const humanSelection = "Paper"
         const computerSelection = getComputerChoice(3);
         console.log(playRound(humanSelection, computerSelection))
-        outPara.textContent = "Computer chose " + computerSelection + " | You chose " + humanSelection
+        outPara.textContent = "Computer: " + computerSelection + " | Human: " + humanSelection
         outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
@@ -77,7 +77,7 @@ function playGame() {
         const humanSelection = "Scissors"
         const computerSelection = getComputerChoice(3);
         console.log(playRound(humanSelection, computerSelection))
-        outPara.textContent = "Computer chose " + computerSelection + " | You chose " + humanSelection
+        outPara.textContent = "Computer: " + computerSelection + " | Human: " + humanSelection
         outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
@@ -92,7 +92,9 @@ const para = document.createElement("p")
 para.classList.add("result")
 
 const paraHumanVictoryCounter = document.createElement("p")
+paraHumanVictoryCounter.classList.add("paraHumanVictoryCounter")
 const paraComputerVictoryCounter = document.createElement("p")
+paraComputerVictoryCounter.classList.add("paraComputerVictoryCounter")
 
 let matchesWonbyHuman = 0
 let matchesWonbyComputer = 0
@@ -132,4 +134,8 @@ function endMatch(){
     }
     
 }
+paraHumanVictoryCounter.textContent = 0
+humanVictoryCounter.appendChild(paraHumanVictoryCounter)
+paraComputerVictoryCounter.textContent = 0
+computerVictoryCounter.appendChild(paraComputerVictoryCounter)
 playGame()
