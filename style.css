@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: beige;
+    font-family: "Radio Canada Big", sans-serif;
+}
+
+.counters {
+    display: flex;
+    gap: 30px;
+}
+
+.container {
+    border-radius: 20px;
+}
+
+.humanVictoryCounter {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.computerVictoryCounter {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.paraHumanVictoryCounter {
+    margin: 0;
+}
+
+.paraComputerVictoryCounter {
+    margin: 0;
+}
+
+button {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+button:hover {
+    color: blue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 400px;
+    background-color: lightblue;
+    flex-wrap: wrap;
+}
+
+.result {
+    color: darkgreen;
+}
+
+.outPara {
+    margin: 10px;
+}
+
+.outputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    max-width: 400px;
+    min-width: 0px;
+    margin-bottom: 20px;
+}
+
+.optionsContainer {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.resultContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 310px;
+}

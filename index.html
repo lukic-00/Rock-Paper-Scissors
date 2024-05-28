@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
-    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <h1>Rock, Paper & Scissors</h1>
+    <div class="container">
+        <p>Play against the computer! Each game has 5 rounds.</p>
+        <div class="outputContainer"></div>
+        <div class="optionsContainer">
+            <div class="buttons">
+                <button class="rockButton">Rock</button>
+                <button class="paperButton">Paper</button>
+                <button class="scissorsButton">Scissors</button>
+            </div>
+            <div class="counters">
+                <div class="humanVictoryCounter">Human victories</div>
+                <div class="computerVictoryCounter">Computer victories</div>
+            </div>
+        </div>
+        <div class="resultContainer"></div>
+    </div>
 </body>
 </html>
