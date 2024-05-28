@@ -53,7 +53,7 @@ function playGame() {
         const humanSelection = "Rock"
         const computerSelection = getComputerChoice(3);
         console.log(playRound(humanSelection, computerSelection))
-        outPara.textContent = "Computer: " + computerSelection + " | Human: " + humanSelection
+        outPara.textContent = `Computer: ${computerSelection} | Human: ${humanSelection}`
         outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
@@ -65,7 +65,7 @@ function playGame() {
         const humanSelection = "Paper"
         const computerSelection = getComputerChoice(3);
         console.log(playRound(humanSelection, computerSelection))
-        outPara.textContent = "Computer: " + computerSelection + " | Human: " + humanSelection
+        outPara.textContent = `Computer: ${computerSelection} | Human: ${humanSelection}`
         outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
@@ -77,7 +77,7 @@ function playGame() {
         const humanSelection = "Scissors"
         const computerSelection = getComputerChoice(3);
         console.log(playRound(humanSelection, computerSelection))
-        outPara.textContent = "Computer: " + computerSelection + " | Human: " + humanSelection
+        outPara.textContent = `Computer: ${computerSelection} | Human: ${humanSelection}`
         outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
