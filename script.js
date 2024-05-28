@@ -42,6 +42,7 @@ let matchesWonbyHuman = 0
 let matchesWonbyComputer = 0
 
 const outPara = document.createElement("p")
+outPara.classList.add("outPara")
 
 function playGame() {
 
@@ -99,18 +100,18 @@ function endMatch(){
             matchesWonbyHuman++
             para.textContent = "Human has won the game!"
             resultContainer.appendChild(para)
-            outPara.textContent = ""
+            outPara.textContent = "Game Over!"
         } else if(humanScore < computerScore){
             finalResult = "Computer has won the game!"
             matchesWonbyComputer++
             para.textContent = "Computer has won the game!"
             resultContainer.appendChild(para)
-            outPara.textContent = ""
+            outPara.textContent = "Game Over!"
         } else {
             finalResult = "Draw!"
             para.textContent = "Draw!"
             resultContainer.appendChild(para)
-            outPara.textContent = ""
+            outPara.textContent = "Game Over!"
 
         }
         humanScore = 0;

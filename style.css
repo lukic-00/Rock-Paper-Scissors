@@ -4,12 +4,19 @@ body {
     justify-content: center;
     text-align: center;
     background-color: beige;
+    font-family: "Radio Canada Big", sans-serif;
 }
 
 button {
     padding: 20px;
     border-radius: 10px;
     background-color: antiquewhite;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    color: blue;
 }
 
 .container {
@@ -22,16 +29,23 @@ button {
 }
 
 .result {
-    color: blue;
+    color: darkgreen;
+}
+
+.outPara {
+    margin: 10px;
 }
 
 .outputContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
-    height: 30px;
-    width: 310px;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    max-width: 310px;
+    min-width: 0px;
     margin-bottom: 20px;
 }
 
@@ -43,7 +57,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
+    background-color: white;
+    border-radius: 20px;
     height: 30px;
     width: 310px;
 }
