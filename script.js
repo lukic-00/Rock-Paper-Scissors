@@ -16,6 +16,8 @@ const scissorsButton = document.querySelector(".scissorsButton")
 const optionsContainer = document.querySelector(".optionsContainer")
 const outputContainer = document.querySelector(".outputContainer")
 const resultContainer = document.querySelector(".resultContainer")
+const computerVictoryCounter = document.querySelector(".computerVictoryCounter")
+const humanVictoryCounter = document.querySelector(".humanVictoryCounter")
 
 let humanScore = 0
 let computerScore = 0
@@ -38,8 +40,7 @@ function playRound(humanSelection,computerSelection) {
 }
 
 let roundsPlayed = 0;
-let matchesWonbyHuman = 0
-let matchesWonbyComputer = 0
+
 
 const outPara = document.createElement("p")
 outPara.classList.add("outPara")
@@ -90,6 +91,11 @@ function playGame() {
 const para = document.createElement("p")
 para.classList.add("result")
 
+const paraHumanVictoryCounter = document.createElement("p")
+const paraComputerVictoryCounter = document.createElement("p")
+
+let matchesWonbyHuman = 0
+let matchesWonbyComputer = 0
 
 function endMatch(){
     let finalResult;
@@ -114,6 +120,10 @@ function endMatch(){
             outPara.textContent = "Game Over!"
 
         }
+        paraHumanVictoryCounter.textContent = matchesWonbyHuman
+        humanVictoryCounter.appendChild(paraHumanVictoryCounter)
+        paraComputerVictoryCounter.textContent = matchesWonbyComputer
+        computerVictoryCounter.appendChild(paraComputerVictoryCounter)
         humanScore = 0;
         computerScore = 0;
     }
