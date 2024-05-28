@@ -28,10 +28,10 @@ function playRound(humanSelection,computerSelection) {
         humanSelection == "Scissors" && computerSelection == "Paper") {
         humanScore++
         return "Human wins!"
-    } else if (humanChoice == "Rock" && computerChoice == "Scissors" ||
-        humanChoice == "Rock" && computerChoice == "Rock" ||
-        humanChoice == "Paper" && computerChoice == "Paper" ||
-        humanChoice == "Scissors" && computerChoice == "Scissors") {
+    } else if (humanSelection == "Rock" && computerSelection == "Scissors" ||
+        humanSelection == "Rock" && computerSelection == "Rock" ||
+        humanSelection == "Paper" && computerSelection == "Paper" ||
+        humanSelection == "Scissors" && computerSelection == "Scissors") {
             return "Draw!"
     } else {
         computerScore++
