@@ -11,3 +11,39 @@ button {
     border-radius: 10px;
     background-color: antiquewhite;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 400px;
+    background-color: lightblue;
+}
+
+.result {
+    color: blue;
+}
+
+.outputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 30px;
+    width: 310px;
+    margin-bottom: 20px;
+}
+
+.optionsContainer {
+    margin-bottom: 20px;
+}
+
+.resultContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    height: 30px;
+    width: 310px;
+}

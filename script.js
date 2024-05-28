@@ -14,6 +14,8 @@ const rockButton = document.querySelector(".rockButton")
 const paperButton = document.querySelector(".paperButton")
 const scissorsButton = document.querySelector(".scissorsButton")
 const optionsContainer = document.querySelector(".optionsContainer")
+const outputContainer = document.querySelector(".outputContainer")
+const resultContainer = document.querySelector(".resultContainer")
 
 let humanScore = 0
 let computerScore = 0
@@ -39,6 +41,8 @@ let roundsPlayed = 0;
 let matchesWonbyHuman = 0
 let matchesWonbyComputer = 0
 
+const outPara = document.createElement("p")
+
 function playGame() {
 
     function fullTurn() {
@@ -46,9 +50,9 @@ function playGame() {
     rockButton.addEventListener("click", () => {
         const humanSelection = "Rock"
         const computerSelection = getComputerChoice(3);
-        console.log("Human chose: " + humanSelection)
-        console.log("Computer chose: " + computerSelection)
         console.log(playRound(humanSelection, computerSelection))
+        outPara.textContent = "Computer chose " + computerSelection + " | You chose " + humanSelection
+        outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
         console.log(roundsPlayed)
@@ -58,9 +62,9 @@ function playGame() {
     paperButton.addEventListener("click", () => {
         const humanSelection = "Paper"
         const computerSelection = getComputerChoice(3);
-        console.log("Human chose: " + humanSelection)
-        console.log("Computer chose: " + computerSelection)
         console.log(playRound(humanSelection, computerSelection))
+        outPara.textContent = "Computer chose " + computerSelection + " | You chose " + humanSelection
+        outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
         console.log(roundsPlayed)
@@ -70,9 +74,9 @@ function playGame() {
     scissorsButton.addEventListener("click", () => {
         const humanSelection = "Scissors"
         const computerSelection = getComputerChoice(3);
-        console.log("Human chose: " + humanSelection)
-        console.log("Computer chose: " + computerSelection)
         console.log(playRound(humanSelection, computerSelection))
+        outPara.textContent = "Computer chose " + computerSelection + " | You chose " + humanSelection
+        outputContainer.appendChild(outPara)
         console.log("Human: " + humanScore + "; " + "Computer: " + computerScore)
         roundsPlayed++
         console.log(roundsPlayed)
@@ -83,6 +87,8 @@ function playGame() {
 }
 
 const para = document.createElement("p")
+para.classList.add("result")
+
 
 function endMatch(){
     let finalResult;
@@ -91,26 +97,27 @@ function endMatch(){
         if(humanScore > computerScore){
             finalResult = "Human has won the game!"
             matchesWonbyHuman++
-            //alert(finalResult)
             para.textContent = "Human has won the game!"
-            optionsContainer.appendChild(para)
+            resultContainer.appendChild(para)
+            outPara.textContent = ""
         } else if(humanScore < computerScore){
             finalResult = "Computer has won the game!"
             matchesWonbyComputer++
-            //alert(finalResult)
             para.textContent = "Computer has won the game!"
-            optionsContainer.appendChild(para)
+            resultContainer.appendChild(para)
+            outPara.textContent = ""
         } else {
             finalResult = "Draw!"
-            //alert(finalResult)
             para.textContent = "Draw!"
-            optionsContainer.appendChild(para)
+            resultContainer.appendChild(para)
+            outPara.textContent = ""
+
         }
         humanScore = 0;
         computerScore = 0;
     }
     if(everyFiveRounds != 0){
-        optionsContainer.removeChild(para)
+        para.textContent = ""
     }
     
 }
