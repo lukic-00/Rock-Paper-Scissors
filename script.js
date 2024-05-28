@@ -80,9 +80,6 @@ function playGame() {
     } )
     }  
     fullTurn()
-    
-    
-    
 }
 
 const para = document.createElement("p")
@@ -111,7 +108,10 @@ function endMatch(){
         }
         humanScore = 0;
         computerScore = 0;
-    }  
+    }
+    if(everyFiveRounds != 0){
+        optionsContainer.removeChild(para)
+    }
     
 }
 playGame()
